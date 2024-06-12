@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: mintcream;
+  box-shadow: inset -10px -10px  #FF073A,
+    inset 10px 10px #FF073A,
+    inset -20px -20px  #FF6700,
+    inset 20px 20px #FF6700,
+    inset -30px -30px  #FFEA00,
+    inset 30px 30px #FFEA00,
+    inset -40px -40px  #39FF14,
+    inset 40px 40px #39FF14,
+    inset -50px -50px  #0D98BA,
+    inset 50px 50px #0D98BA,
+    inset -60px -60px  #4B0082,
+    inset 60px 60px #4B0082,
+    inset -70px -70px  #8A2BE2,
+    inset 70px 70px #8A2BE2;
+}
+
+ul {
+  width: 400px;
+  height: 200px;
+  position: relative;
+  border-bottom: 1px solid #0002;
+  overflow: hidden;
+  transform: scale(2.5);
+
+  li {
+    list-style-type: none;
+    border: 15px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-left-color: transparent !important;
+    border-bottom-color: transparent !important;
+    box-shadow: 0 0 10px #0002;
+    animation: mover 4s linear infinite alternate both;
+    animation-delay: calc(var(--d) * .2s);
+  }
+
+  li:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    border-color: #FF073A;
+  }
+
+  li:nth-child(2) {
+    width: 90px;
+    height: 90px;
+    border-color: #FF6700;
+  }
+
+  li:nth-child(3) {
+    width: 120px;
+    height: 120px;
+    border-color: #FFEA00;
+  }
+
+  li:nth-child(4) {
+    width: 150px;
+    height: 150px;
+    border-color: #39FF14;
+  }
+
+  li:nth-child(5) {
+    width: 180px;
+    height: 180px;
+    border-color: #0D98BA;
+  }
+
+  li:nth-child(6) {
+    width: 210px;
+    height: 210px;
+    border-color: #4B0082;
+  }
+
+  li:nth-child(7) {
+    width: 240px;
+    height: 240px;
+    border-color: #8A2BE2;
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(315deg);
+  }
+}
+
+@media (width <= 1200px) {
+  ul {
+    transform: scale(1);
+  }
+}
+@media (width <= 700px) {
+
+  ul {
+    transform: scale(.6);
+  }
+}
